@@ -1,10 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
 
+import { Title } from './components/Title/Title.js';
+import { NavBar } from './components/NavBar/NavBar.js';
+
+
 function App() {
+  const styles = {
+    backgroundColor: "#000080",
+  }
+
+  const alertName = () => alert("Hola! Bienvenido!");
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header style={styles} className="App-header">
+        <NavBar />
+        <Title />
+        <button onClick={alertName} >Click me!</button>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -15,7 +28,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React!
         </a>
       </header>
     </div>
