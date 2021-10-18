@@ -3,34 +3,63 @@ import './App.css';
 import { useState } from 'react';
 
 import { NavBar } from './components/NavBar/NavBar.js';
+import { Header } from './components/Header/Header.js';
+import { SubHeader } from './components/SubHeader/SubHeader.js';
 import { Title } from './components/Title/Title.js';
 import { Text } from './components/Text/Text.js';
-import { Counter } from './components/Counter/Counter.js';
+import { ItemCount } from './components/ItemCount/ItemCount.js';
 import { Hello } from './components/hello.js';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.js';
+
+// const [loading, setLoading] = useState(true);
+
+const productos = [
+  {
+    id: "01",
+    price: 200,
+    name: "Bicicleta",
+    stock: 5
+  },
+  {
+    id: "02",
+    price: 400,
+    name: "Monopatin",
+    stock: 8
+  }
+]
+
+//haciendo uso de una PROMESA para llamar al ARRAY Productos
+const task = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve(productos);
+  }, 3000);
+});
+task.then(
+  (result) => {
+    console.log(result);
+    // setLoading(false);
+  },
+  (error) => {
+    console.log(error);
+  }
+);
 
 function App() {
   const styles = {
     backgroundColor: "#000080",
   }
 
-  const [name, setName] = useState("Roberto");
-  const handleClick = () => { setName("Carla") };
+  //Defino estado para el componente ItemCount
+  const [counter, setCounter] = useState(1)
 
-  const [title, setTitle] = useState("Clase 04")
-  const [counter, setCounter] = useState(0)
-  //title es el nombre y SETnombre se usa para el estado.
-  //const handleTitle = () => setTitle("Clase 05")
+  const maxStock = 10;
 
-  const alertName = () => alert("Hola! Bienvenido!");
-  const handleTitle = () => setTitle("Clase 05")
-  const [lastClickDate, setLastClickDate] = useState(new Date());
-
-  // const handleTitle = () => alert("Hiciste click en el titulo!");
-  
-  const add = () => { 
-    setCounter (counter + 1);
-    setLastClickDate(new Date());
+  const add = () => {
+    if (counter < maxStock){
+      setCounter(counter + 1)
+    } else {
+      alert("LLego al máximo de stock de este producto")
+    }
   }
 
   const remove = () => {
@@ -39,47 +68,32 @@ function App() {
     } else {
       alert("No se pueden remover mas elementos del carrito")
     }
-    setLastClickDate(new Date());
   }
-
+   
   return (
     <div className="App">
       <header style={styles} className="App-header">
         <NavBar />
-        <Title onTitle={handleTitle} text="Haz click aqui!" />
-        <Title text={title} onTitle={handleTitle}/>
-        <Title text="Proyecto Emmanuel Pinto" />
-        <div onClick={handleClick} className="App">
-            <Hello name={name} />
-        </div>
-        {/* con este metodo usamos el componente texto */}
-        <button onClick={add}>+</button>
-        <Title text={counter} />
-        <button onClick={remove}>-</button>
-        
-        {/* con este metodo usamos el componente Counter */}
-        <Counter value={counter} onAdd={add} onRemove={remove} lastClickDate={lastClickDate} />
-
-        <Text description="Hola bienvenidos a React JS" >
-          <p>Hola soy children</p>
-          <h3>Hola soy un segundo hijo</h3>
-        </Text>
-        <button onClick={alertName} >Click me!</button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React!
-        </a>
+        <Header text="Proyecto: Tienda virtual" />
+        <SubHeader text="Alumno: Emmanuel Pinto" />
+        <Title text="Esto es un título!" />
+        <Text description="Bienvenidos al sitio!" />
+        <ItemCount value={counter} onAdd={add} onRemove={remove} />
       </header>
       <body>
         <ItemListContainer greeting="Juan Carlos" />
+        <ul>
+          {/* //Idealmente debemos incluir en cada elemento la propiedad KEY,
+          que marque la IDENTIDAD del ELEMENTO. Esto ayudará a react
+          a OPTIMIZAR el rendering ante cambios en el array. */}
+          {productos.map(u => <li key={u.id}><strong>Producto: </strong>{u.name} | <strong>Precio: </strong>{u.price}</li>)}
+
+          {/* //Para crear el COMPONENTE lo usariamos asi:
+          {productos.map((productos) => (
+            <Producto name={productos.name} price={productos.price}>
+          ))} */}
+
+        </ul>
       </body>
     </div>
   );
