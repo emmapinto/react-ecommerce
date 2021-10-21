@@ -1,4 +1,4 @@
-export const Item = (pelicula => {
+export const Item = ({pelicula}) => {
    
     return (
         <div className="item" id={pelicula.name}>
@@ -20,7 +20,6 @@ export const Item = (pelicula => {
            </div>
            </div>      
     )
-
-});
+};
 
 export default Item;
