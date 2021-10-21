@@ -1,3 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+html {
+  font-size: 100%; /* 100% = 16px */
+}
+
+body {
+  background-color: #FFCB3D;
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
 .App {
   text-align: center;
 }
@@ -89,4 +113,20 @@ nav img {
   border:0;
   color:#000;
   flex-basis: 150px;
+}
+.item {
+  background-color: #fff;
+  float:left;
+  margin:15px;
+  width:420px;
+  height:400px;
+  text-align:center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.item img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  padding: 10px;
 }

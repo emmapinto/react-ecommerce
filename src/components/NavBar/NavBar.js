@@ -1,19 +1,22 @@
 import { CartWidget } from './CartWidget.js';
+import { menu } from '../utiles/helpers.js';
+import logo from '../../logo.svg';
 
 export const NavBar = () => {
     return (
         <nav>
             <div>
                 <ul id="nav">
-                <img src="/static/media/logo.6ce24c58.svg" alt="logo" />
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Vehiculos</a></li>
-                    <li><a href="#">Electronica</a></li>
-                    <li><a href="#">Libros</a></li>
-                    <li><a href="#">Indumentaria</a></li>
+                    <img src={logo} alt="logo" />
+                    {
+                        menu.map(item =>{
+                            return <li><a href="#">{item}</a></li>
+                        })
+                    }
                     <CartWidget />
                 </ul>
             </div>
         </nav>
     )
 }
+

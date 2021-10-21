@@ -1,0 +1,34 @@
+[
+    {
+      "id": "01",
+      "price": 200,
+      "name": "Alien",
+      "stock": 5, 
+      "pictureUrl": "catalogo/alien.png",
+      "genre": "Terror"
+    },
+    {
+      "id": "02",
+      "price": 400,
+      "name": "Halloween",
+      "stock": 10, 
+      "pictureUrl": "catalogo/halloween.png",
+      "genre": "Terror"
+    },
+    {
+      "id": "03",
+      "price": 600,
+      "name": "The Godfather",
+      "stock": 8, 
+      "pictureUrl": "catalogo/the-godfather.png",
+      "genre": "Mafia"
+    },
+    {
+      "id": "04",
+      "price": 100,
+      "name": "Home alone",
+      "stock": 4, 
+      "pictureUrl": "catalogo/home-alone.png",
+      "genre": "Comedia"
+    }
+]
