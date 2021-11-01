@@ -3,7 +3,8 @@
       "id": "01",
       "price": 200,
       "name": "Alien",
-      "stock": 5, 
+      "stock": 5,
+      "year": 1979,
       "pictureUrl": "catalogo/alien.png",
       "genre": "Terror"
     },
@@ -12,6 +13,7 @@
       "price": 400,
       "name": "Halloween",
       "stock": 10, 
+      "year": 1979,
       "pictureUrl": "catalogo/halloween.png",
       "genre": "Terror"
     },
@@ -20,15 +22,53 @@
       "price": 600,
       "name": "The Godfather",
       "stock": 8, 
+      "year": 1972,
       "pictureUrl": "catalogo/the-godfather.png",
       "genre": "Mafia"
     },
     {
       "id": "04",
       "price": 100,
-      "name": "Home alone",
-      "stock": 4, 
+      "name": "Home Alone",
+      "stock": 14,
+      "year": 1990,
       "pictureUrl": "catalogo/home-alone.png",
       "genre": "Comedia"
+    },
+    {
+      "id": "05",
+      "price": 350,
+      "name": "Ghostbusters",
+      "stock": 15,
+      "year": 1984,
+      "pictureUrl": "catalogo/ghostbusters.png",
+      "genre": "Comedia"
+    },
+    {
+      "id": "06",
+      "price": 150,
+      "name": "Indiana Jones",
+      "stock": 17,
+      "year": 1981,
+      "pictureUrl": "catalogo/indiana-jones.png",
+      "genre": "Aventura"
+    },
+    {
+      "id": "07",
+      "price": 500,
+      "name": "Rocky",
+      "stock": 12,
+      "year": 1976,
+      "pictureUrl": "catalogo/rocky.png",
+      "genre": "Drama"
+    },
+    {
+      "id": "08",
+      "price": 420,
+      "name": "Back to the future",
+      "stock": 16,
+      "year": 1985,
+      "pictureUrl": "catalogo/back-to-the-future.png",
+      "genre": "Ciencia Ficcion"
     }
 ]

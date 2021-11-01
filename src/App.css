@@ -2,16 +2,21 @@
   padding: 0;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-
 }
 html {
   font-size: 100%; /* 100% = 16px */
+  background-color: #fcc139;
 }
 
 body {
-  background-color: #FFCB3D;
   padding: 0;
   margin: 0;
+}
+section {
+  background-color: #fcc139;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  padding: 10px;
 }
 
 h3 {
@@ -24,6 +29,7 @@ p {
 
 .App {
   text-align: center;
+  background-color: #f2f2f2;
 }
 
 .App-logo {
@@ -39,7 +45,6 @@ p {
 
 .App-header {
   background-color: #282c34;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -60,19 +65,29 @@ p {
   }
 }
 
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+  background-color: #f2f2f2;
+  padding-top: 5px;
+}
+nav div {
+  text-align: center;
+}
+
+nav img {
+  float: left;
+  width: 80px;
+  padding: 5px
+}
 #nav {
   width: 100%;
   float: left;
   margin: 0;
   padding: 0;
   list-style: none;
-  background-color: #f2f2f2;
-  border-bottom: 1px solid #ccc; 
-  border-top: 1px solid #ccc;
-}
-nav img {
-  float: left;
-  width: 50px;
 }
 #nav li {
   float: left;
@@ -83,24 +98,22 @@ nav img {
   text-decoration: none;
   font-weight: bold;
   color: #069;
-  border-right: 1px solid #ccc;
 }
 
 .ItemCount {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: stretch;
+  align-items: baseline;
   border: 1px solid #ccc;
   border-radius: 10px;
-  width: 250px;
+  width: 160px;
   background-color:#FFF;
   margin: 10px;
 }
 
 .ItemCount button {
   background-color: rgb(0, 0, 128);
-  font-size:36px;
   border:0;
   border-radius: 10px;
   color:#2ACAEA;
@@ -109,17 +122,20 @@ nav img {
 }
 
 .ItemCount p {
+  font-size: 0.8em;
   background-color: #fff;
   border:0;
   color:#000;
-  flex-basis: 150px;
+  flex-basis: 50px;
+  padding-top: 10px;
+  text-align: center;
 }
 .item {
   background-color: #fff;
   float:left;
   margin:15px;
   width:420px;
-  height:400px;
+  height:380px;
   text-align:center;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -129,4 +145,11 @@ nav img {
   max-width: 150px;
   height: auto;
   padding: 10px;
+}
+/* Clases usadas por Bootstrap */
+.modal-body {
+  text-align: center;
+}
+.modal-footer {
+    justify-content: space-evenly;
 }

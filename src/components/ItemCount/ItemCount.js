@@ -1,4 +1,5 @@
 export const ItemCount = ({value, onAdd, onRemove}) => {
+
     return (
         <div className="ItemCount">
             <button onClick={onRemove}>-</button>
@@ -7,3 +8,5 @@ export const ItemCount = ({value, onAdd, onRemove}) => {
         </div>
     )
 }
+
+export default ItemCount;

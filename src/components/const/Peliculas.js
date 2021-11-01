@@ -4,6 +4,7 @@ const peliculas = [
       price: 200,
       name: "Alien",
       stock: 5, 
+      year: 1990, 
       pictureUrl: "./assets/catalogo/alien.png",
       genre: "Terror"
     },
@@ -11,7 +12,8 @@ const peliculas = [
       id: "02",
       price: 400,
       name: "Halloween",
-      stock: 10, 
+      stock: 10,
+      year: 1990,
       pictureUrl: "./assets/catalogo/halloween.png",
       genre: "Terror"
     },
@@ -19,7 +21,8 @@ const peliculas = [
       id: "03",
       price: 600,
       name: "The Godfather",
-      stock: 8, 
+      stock: 8,
+      year: 1990,
       pictureUrl: "./assets/catalogo/the-godfather.png",
       genre: "Mafia"
     },
@@ -27,7 +30,8 @@ const peliculas = [
       id: "04",
       price: 100,
       name: "Home alone",
-      stock: 4, 
+      stock: 4,
+      year: 1990,
       pictureUrl: "assets/catalogo/home-alone.png",
       genre: "Comedia"
     }

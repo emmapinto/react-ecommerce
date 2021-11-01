@@ -1,5 +1,11 @@
+import React, {useState} from 'react';
+import ItemDetail from '../../components/ItemDetailContainer/ItemDetail.js';
+import Button from 'react-bootstrap/Button';
+
 export const Item = ({pelicula}) => {
-   
+
+    const [modalShow, setModalShow] = useState(false);
+    
     return (
         <div className="item" id={pelicula.name}>
            <div>
@@ -7,14 +13,19 @@ export const Item = ({pelicula}) => {
                <div>
                     <div>
                         <h3>{pelicula.name}</h3>
-                        <p><strong>Género:</strong> {pelicula.genre}</p>
-                        <p><strong>Precio:</strong> {pelicula.price}</p>
-                        <p><strong>Unidades disponibles:</strong> {pelicula.stock}</p>
-                    </div>
-               </div>
-               <div>
-                    <div>
-                        <a href="#">Ver detalles</a>
+                        <p><strong>Precio:</strong> ${pelicula.price}</p>
+
+                        <>
+                        <Button variant="primary" onClick={() => setModalShow(true)}>Ver detalles</Button>
+                        <ItemDetail
+                        pictureUrl={pelicula.pictureUrl}
+                        name={pelicula.name}
+                        genre={pelicula.genre}
+                        year={pelicula.year}
+                        stock={pelicula.stock}
+                        show={modalShow} onHide={() => setModalShow(false)} />
+                        </>
+                        
                     </div>
                </div>
            </div>

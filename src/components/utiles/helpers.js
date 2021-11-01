@@ -1,4 +1,4 @@
-export const menu = ["Home", "Comedia", "Accion", "Aventuras", "Terror"]
+export const menu = ["Home", "Comedia", "Accion", "Aventuras", "Terror", "Sci-Fi", "Drama"]
 
 export const colors = {
     black: "#000000",
