@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ItemDetail from '../../components/ItemDetailContainer/ItemDetail.js';
 import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
 
 export const Item = ({pelicula}) => {
 
@@ -18,6 +19,7 @@ export const Item = ({pelicula}) => {
                         <>
                         <Button variant="primary" onClick={() => setModalShow(true)}>Ver detalles</Button>
                         <ItemDetail
+                        id={pelicula.id}
                         pictureUrl={pelicula.pictureUrl}
                         name={pelicula.name}
                         genre={pelicula.genre}

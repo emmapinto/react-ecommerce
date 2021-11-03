@@ -6,6 +6,7 @@
 html {
   font-size: 100%; /* 100% = 16px */
   background-color: #fcc139;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fcc139 100%);
 }
 
 body {
@@ -14,6 +15,7 @@ body {
 }
 section {
   background-color: #fcc139;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fcc139 100%);
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   padding: 10px;
@@ -71,6 +73,7 @@ nav {
   justify-content: center;
   align-items: stretch;
   background-color: #f2f2f2;
+  background-image: linear-gradient(81deg, rgba(204,204,204,1) 0%, rgba(242,242,242,1) 91%);
   padding-top: 5px;
 }
 nav div {
@@ -135,11 +138,12 @@ nav img {
   float:left;
   margin:15px;
   width:420px;
-  height:380px;
+  height:400px;
   text-align:center;
   border: 1px solid #ccc;
   border-radius: 5px;
-}
+  padding-top: 10px;
+ }
 .item img {
   width: 100%;
   max-width: 150px;

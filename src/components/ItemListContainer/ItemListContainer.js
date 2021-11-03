@@ -28,7 +28,6 @@ export const ItemListContainer = (props) => {
  
     return (
         <div>
-            <p>Hola {props.greeting}! Este es un título provisional que luego reemplazaremos por nuestro catálogo</p>
             <ItemList info={peliculas} />
         </div>
     );

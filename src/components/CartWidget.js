@@ -1,4 +1,4 @@
-import cart from '../../assets/img/cart_icon.png';
+import cart from '../assets/img/cart_icon.png';
 
 const styles = {
     width: "50px",
@@ -10,4 +10,4 @@ export const CartWidget = () => {
     )
 }
 
-
+export default CartWidget;
