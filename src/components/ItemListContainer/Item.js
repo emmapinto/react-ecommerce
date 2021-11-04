@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import ItemDetail from '../../components/ItemDetailContainer/ItemDetail.js';
 import Button from 'react-bootstrap/Button';
-import { Link } from "react-router-dom";
 
 export const Item = ({pelicula}) => {
 

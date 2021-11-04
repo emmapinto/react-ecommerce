@@ -6,3 +6,5 @@ export const Text = (props) => {
         </div>
     )
 }
+
+export default Text;

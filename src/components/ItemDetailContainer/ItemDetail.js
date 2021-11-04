@@ -3,9 +3,8 @@ import ItemCount from '../../components/ItemCount.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-
 export const ItemDetail = (props) => {
-  
+
     //Defino estado para el componente ItemCount
     const [counter, setCounter] = useState(0)
 
@@ -45,7 +44,7 @@ export const ItemDetail = (props) => {
           </Modal.Body>
           <Modal.Footer>
             <ItemCount value={counter} onAdd={add} onRemove={remove} />
-            <Button href="#">Agregar al carrito</Button>
+            <Button >Agregar al carrito</Button>
             <Button onClick={props.onHide}>Volver al catalogo</Button>
           </Modal.Footer>
         </Modal>

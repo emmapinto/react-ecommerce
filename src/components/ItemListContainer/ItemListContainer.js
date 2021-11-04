@@ -17,9 +17,6 @@ export const ItemListContainer = (props) => {
         }, 2000)
       });
   
-    //se usan [] al final para que NO loopee eternamente.
-    // UseEffect > Si el segundo parametro llamado "ARRAY DE DEPENDENCIA" lo dejamos vacio es porque queremos que se ejecute SOLAMENTE cuando el componenete se MONTE.
-
     useEffect(() => {
       getData(Peliculas)
           .then((res) => setPeliculas(res))

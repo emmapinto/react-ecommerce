@@ -1,5 +1,6 @@
 import Item from './Item.js';
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const ItemList = ({info}) => {
 
@@ -13,10 +14,10 @@ export const ItemList = ({info}) => {
         info.length ?
           info.map((peli) => {
             if (categoryId === peli.genre){
-              return(<Item pelicula={peli} key={peli.id} />)
+              return(<Link to={`../item/${peli.id}`}><Item pelicula={peli} key={peli.id} /></Link>)
             }
             else if (categoryId === undefined) {
-              return(<Item pelicula={peli} key={peli.id} />)
+              return(<Link to={`../item/${peli.id}`}><Item pelicula={peli} key={peli.id} /></Link>)
             }
           })
         : "Loading..."

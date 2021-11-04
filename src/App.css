@@ -19,6 +19,7 @@ section {
 }
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   padding: 10px;
+  margin-bottom: 0 !important;
 }
 
 h3 {
@@ -156,4 +157,7 @@ nav img {
 }
 .modal-footer {
     justify-content: space-evenly;
+}
+a, a:hover, a:hover {
+  color: #000000 !important;
 }
