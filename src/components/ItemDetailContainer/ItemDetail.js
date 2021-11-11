@@ -2,20 +2,10 @@ import React, {useState} from 'react';
 import ItemCount from '../../components/ItemCount.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { useTheme, CartProvider } from "../../context/CartContext.js"
 
 export const ItemDetail = (props) => {
-
-    const onAddCart = () => {
-      // Esta función utilizará el valor almacenado en el estado de COUNTER para
-      // almacenar el Item correspondiente en el carrito de compra
-
-      return (
-      <>
-        ...
-      </>
-      )
-    }
-
+  
     //Defino estado para el componente ItemCount
     const [counter, setCounter] = useState(0)
 
@@ -33,6 +23,23 @@ export const ItemDetail = (props) => {
         } else {
         alert("No se pueden remover mas elementos del carrito")
         }
+    }
+
+    const {cart, addItem, removeItem, clearCart} = useTheme();
+
+    const addToCart = () => {
+      // Esta función utilizará el valor almacenado en el estado de COUNTER para
+      // almacenar el Item correspondiente en el carrito de compra
+      if (counter){
+
+        console.log(`Agregar al carrito el item N° ${props.id} "${props.name}", con la cantidad: ${counter}`);
+        console.log(cart);
+
+      }
+
+      return (
+        <CartProvider cart={cart} addItem={addItem} removeItem={removeItem} clearCart={clearCart}/>
+      )
     }
 
     return (
@@ -55,8 +62,7 @@ export const ItemDetail = (props) => {
           </Modal.Body>
           <Modal.Footer>
             <ItemCount value={counter} onAdd={add} onRemove={remove} />
-            <Button onClick={onAddCart}>Agregar al carrito</Button>
-            <Button onClick={props.onHide}>Volver al catalogo</Button>
+            <Button onClick={addToCart}>Agregar al carrito</Button>
           </Modal.Footer>
         </Modal>
     );
