@@ -158,6 +158,18 @@ nav img {
 .modal-footer {
     justify-content: space-evenly;
 }
-a, a:hover, a:hover {
+a, a:hover {
   color: #000000 !important;
+  text-decoration: none !important;
+}
+.modal-footer a, .modal-footer a:hover {
+  color: #FFFFFF !important;
+}
+.counter {
+  text-decoration: none;
+  background-color: red;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 7px;
+  color: white;
 }

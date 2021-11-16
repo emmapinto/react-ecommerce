@@ -1,10 +1,10 @@
-export const ItemCount = ({value, onAdd, onRemove}) => {
+export const ItemCount = ({value, onAddCounter, onRemoveCounter}) => {
 
     return (
         <div className="ItemCount">
-            <button onClick={onRemove}>-</button>
+            <button onClick={onRemoveCounter}>-</button>
             <p>{value}</p>
-            <button onClick={onAdd}>+</button>
+            <button onClick={onAddCounter}>+</button>
         </div>
     )
 }

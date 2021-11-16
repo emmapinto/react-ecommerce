@@ -3,6 +3,7 @@ import { CartWidget } from './CartWidget.js';
 import { Link } from "react-router-dom";
 
 export const NavBar = () => {
+
     return (
         <nav>
             <div>
@@ -15,7 +16,7 @@ export const NavBar = () => {
                     <li><Link to="/category/Terror">Terror</Link></li>
                     <li><Link to="/category/Sci-Fi">Sci-Fi</Link></li>
                     <li><Link to="/category/Drama">Drama</Link></li>
-                    <CartWidget />
+                    <Link to="/Cart"><CartWidget /></Link>
                 </ul>
             </div>
         </nav>

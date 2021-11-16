@@ -2,35 +2,21 @@ import { createContext, useContext, useState } from "react";
 
 const CartContext = createContext();
 
-export const useTheme = () => useContext(CartContext);
+export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
 
     const [cart, setCart] = useState([]);
 
-    const getFromCart = (id) => {
-        return cart.find(item => item.id === id)
-    } 
-
-    const isInCart = (id) => {
-        return id === undefined ? undefined : getFromCart !== undefined
-    } 
-
-    const addItem = ({ item }) => {
-        if (isInCart(item && item.id)) {
-            console.log("Ya existe este producto en el carrito!");
-            return;
-        }
-        setCart([...cart, item]); 
+    const addItem = ( item ) => {
+        cart.find(obj => obj.id === item.id) ? console.log("Ya existe este producto en el carrito!") : setCart([...cart, item]);
+        // cart.includes( item.id ) ? console.log("Ya existe este producto en el carrito!") : setCart([...cart, item]);
+        console.log( item.id );
         console.log(cart);
     }
 
-    const removeItem = ({ item }) => {
-        if (isInCart(item && item.id)) {
-            setCart([ cart.splice(cart.indexOf(item.id),1) ]);
-            return;
-        }
-        console.log("No existe este producto en el carrito!"); 
+    const removeItem = ( item ) => {
+        cart.find(obj => obj.id === item.id) ? setCart( cart.splice(cart.indexOf(item.id),1) ) : console.log("No existe este producto en el carrito!");
         console.log(cart);
     }
     
@@ -46,7 +32,7 @@ export const CartProvider = ({ children }) => {
     }
 
     return (
-    <CartContext.Provider value={cart, addItem, removeItem, clearCart}>
+    <CartContext.Provider value={{ cart, addItem, removeItem, clearCart, cartSize: cart.length }}>
         {children}
     </CartContext.Provider>
     )

@@ -6,7 +6,9 @@ const styles = {
 
 export const CartWidget = () => {
     return (
-        <img src={cart} alt="Cart" style={styles} />
+        <>
+        <img src={cart} alt="Cart" style={styles} /><span className="counter">10</span>
+        </>
     )
 }
 
