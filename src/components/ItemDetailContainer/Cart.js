@@ -31,12 +31,13 @@ export const Cart = (props) => {
           </Modal.Header>
           <Modal.Body>
               <>
+              <p>Los siguiente productos estan pendientes de compra:</p>
               {
               cart.length ?
               cart.map((peli) => {
                   return(
                     // <img scr={peli.pictureUrl} title={peli.name} alt={peli.name} />
-                    <p>Id: {peli.id} - Nombre: {peli.name}</p>
+                    <p><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stock} | <strong>Precio total:</strong> {peli.price}</p>
                   )
               })
               : "El carrito esta vacío."
@@ -46,6 +47,7 @@ export const Cart = (props) => {
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={clearCart}>Vaciar carrito</Button>
+            <Button >Terminar compra</Button>
             <Link to="/"><Button>Volver al Catálogo</Button></Link>
           </Modal.Footer>
         </Modal>

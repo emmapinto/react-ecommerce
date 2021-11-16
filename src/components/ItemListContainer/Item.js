@@ -24,6 +24,7 @@ export const Item = ({pelicula}) => {
                         genre={pelicula.genre}
                         year={pelicula.year}
                         stock={pelicula.stock}
+                        price={pelicula.price}
                         show={modalShow} onHide={() => setModalShow(false)} />
                         </>
                         

@@ -32,8 +32,10 @@ export const ItemDetail = (props) => {
     const addToCart = () => {
       if (counter != 0){
 
-        console.log(`Agregar al carrito el item N° ${props.id} "${props.name}", con la cantidad: ${counter}`);
+        console.log(`Agregar al carrito el item N° ${props.id} "${props.name}", con la cantidad: ${counter} y el precio ${props.price}`);
         let item = props;
+        // item.stock = counter;
+        // item.price = item.price * counter;
         console.log(item);
         addItem( item );
 
@@ -65,6 +67,7 @@ export const ItemDetail = (props) => {
               <p><strong>Género:</strong> {props.genre}</p>
               <p><strong>Año de estreno:</strong> {props.year}</p>
               <p><strong>Unidades disponibles:</strong> {props.stock}</p>
+              <p><strong>Precio por unidad:</strong> {props.price}</p>
           </Modal.Body>
           <Modal.Footer>
             <ItemCount value={counter} onAddCounter={addCounter} onRemoveCounter={removeCounter} />
