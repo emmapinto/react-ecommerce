@@ -16,6 +16,8 @@ export const Cart = (props) => {
       console.log(cart);
     }
 
+    let total = 0;
+
     return (
 
       <Modal
@@ -35,20 +37,22 @@ export const Cart = (props) => {
               {
               cart.length ?
               cart.map((peli) => {
+                  total = total + peli.priceInCart;
                   return(
                     // <img scr={peli.pictureUrl} title={peli.name} alt={peli.name} />
-                    <p><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stock} | <strong>Precio total:</strong> {peli.price}</p>
+                    <p><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stockInCart} | <strong>Precio total:</strong> {peli.priceInCart}</p>
                   )
               })
-              : "El carrito esta vacío."
+              : <p>El carrito esta vacío.</p>
               }
+              <p className="total"><strong>COSTO TOTAL: </strong>{total}</p>
               </>
               
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={clearCart}>Vaciar carrito</Button>
             <Button >Terminar compra</Button>
-            <Link to="/"><Button>Volver al Catálogo</Button></Link>
+            <Link to="/"><Button>Volver al Catálogo/Seguir comprando</Button></Link>
           </Modal.Footer>
         </Modal>
     );

@@ -24,8 +24,9 @@ function App() {
   } 
 
   const [modalShow, setModalShow] = useState(true);
-  const [product, setProduct] = useState(null);
-  const [products, setProducts] = useState(null);
+  
+  // const [product, setProduct] = useState(null);
+  // const [products, setProducts] = useState(null);
 
   // useEffect(() => {
   //   // ESTO ES PARA TRAER UN SOLO ELEMENTO DE LA COLECCION 👀
@@ -41,12 +42,16 @@ function App() {
 
    // DESCOMENTAR DESDE ACA PARA APLICAR FIREBASE!!!
 
+  //  const [products, setProducts] = useState(null);
+
   // useEffect(() => {
   //   // ESTO ES PARA TRAER TODOS LOS ELEMENTOS DE LA COLECCION
   //   const db = getFirestore();
 
   //   // const q = query(collection(db, "items"), where("genre", "==", "Terror"));
   //   const q = query(collection(db, "items"), where("price", ">", 100));
+
+   // DESCOMENTAR DESDE ACA PARA APLICAR FIREBASE!!!
 
   //   getDocs(q)
   //     .then((snapshot) => {
