@@ -1,13 +1,21 @@
-import cart from '../assets/img/cart_icon.png';
+import cartIcon from '../assets/img/cart_icon.png';
+import { useCart, CartProvider } from "../context/CartContext.js";
 
 const styles = {
     width: "50px",
   } 
 
 export const CartWidget = () => {
+
+    const {cart} = useCart();
+
     return (
+
         <>
-        <img src={cart} alt="Cart" style={styles} /><span className="counter">10</span>
+        <img src={cartIcon} alt="Cart" style={styles} />
+        {
+        cart.length ? (<span className="counter" >{cart.length}</span>) : ("")
+        }
         </>
     )
 }

@@ -170,7 +170,7 @@ a, a:hover {
   background-color: red;
   border-radius: 20px;
   font-size: 12px;
-  padding: 7px;
+  padding: 7px 12px;
   color: white;
 }
 .total {

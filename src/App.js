@@ -24,7 +24,7 @@ function App() {
   } 
 
   const [modalShow, setModalShow] = useState(true);
-  
+
   // const [product, setProduct] = useState(null);
   // const [products, setProducts] = useState(null);
 
@@ -64,18 +64,6 @@ function App() {
       <BrowserRouter>
       <NavBar />
         <Switch>
-          {/* <ul>
-            <li>Bueeeenas</li>
-              { product && ( <li>
-                            Name: {product.name} - Price: {product.price}
-                            </li>
-                            )
-              }
-              { products && products.map((product) => (
-                            <li key={product.name}>Name: {product.name} - Price: {product.price}</li>
-                            ))
-              }
-          </ul> */}
           <Route exact path="/">
           <div className="App">
               <header style={styles} className="App-header">
