@@ -3,10 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {React, useContext, useEffect, useState } from 'react';
 import { BrowserRouter, Switch, Route, useParams } from "react-router-dom";
 
-import { getFirestore } from './firebase';
-// import { doc, getDoc } from "firebase/firestore";
-import { collection, getDocs, query, where } from "firebase/firestore";
-
 import { Logo } from './components/Logo.js';
 import { Header } from './components/Header.js';
 import { SubHeader } from './components/SubHeader.js';
@@ -24,40 +20,6 @@ function App() {
   } 
 
   const [modalShow, setModalShow] = useState(true);
-
-  // const [product, setProduct] = useState(null);
-  // const [products, setProducts] = useState(null);
-
-  // useEffect(() => {
-  //   // ESTO ES PARA TRAER UN SOLO ELEMENTO DE LA COLECCION 👀
-  //   const db = getFirestore();
-
-  //   const biciRef = doc(db, "items", "Uyho0HTTsC40A0IVxXyA");
-  //   getDoc(biciRef).then((snapshot) => {
-  //     if (snapshot.exists()) {
-  //       setProduct(snapshot.data());
-  //     }
-  //   });
-  // }, []);
-
-   // DESCOMENTAR DESDE ACA PARA APLICAR FIREBASE!!!
-
-  //  const [products, setProducts] = useState(null);
-
-  // useEffect(() => {
-  //   // ESTO ES PARA TRAER TODOS LOS ELEMENTOS DE LA COLECCION
-  //   const db = getFirestore();
-
-  //   // const q = query(collection(db, "items"), where("genre", "==", "Terror"));
-  //   const q = query(collection(db, "items"), where("price", ">", 100));
-
-   // DESCOMENTAR DESDE ACA PARA APLICAR FIREBASE!!!
-
-  //   getDocs(q)
-  //     .then((snapshot) => {
-  //       setProducts(snapshot.docs.map( (doc) => doc.data() ) );
-  //     });
-  // }, []);
 
   return (
     <CartProvider>
