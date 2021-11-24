@@ -17,13 +17,10 @@ export const CartProvider = ({ children }) => {
         }
     }
 
-    const removeItem = ( item ) => {
-        if (cart.find(obj => obj.id === item.id)) {
-            setCart( cart.splice(cart.indexOf(item.id),1) )
-            alert("Se removió el producto del carrito");
-        } else {
-            alert("No existe este producto en el carrito!");
-        }
+    const removeItem = ( id ) => {
+        const newCart = cart.filter(item => item.id !== id);
+        setCart(newCart);
+        alert("Se removió este item del carrito");
     }
     
     const clearCart = () => {

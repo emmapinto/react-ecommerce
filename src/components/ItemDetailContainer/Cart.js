@@ -9,14 +9,10 @@ import { collection, getDocs, setDocs, query, where, addDoc } from "firebase/fir
 
 export const Cart = (props) => {
 
-    const {cart, addItem, removeItem, clearCart} = useCart();
+    const {cart, removeItem, clearCart} = useCart();
 
-    const [item, setItem] = useState(null);
-
-    const removeFromCart = () => {
-      setItem(props);
-      removeItem({item});
-      console.log(cart);
+    const removeFromCart = (evt) => {
+      removeItem( evt.target.value );
     }
 
     let total = 0;
@@ -101,7 +97,10 @@ export const Cart = (props) => {
                   total = total + peli.priceInCart;
                   return(
                     // <img scr={peli.pictureUrl} title={peli.name} alt={peli.name} />
+                    <>
                     <p><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stockInCart} | <strong>Precio total:</strong> {peli.priceInCart}</p>
+                    <Button value={peli.id} onClick={removeFromCart}>Remover Item</Button>
+                    </>
                   )
               })
               : <p>El carrito esta vacío.</p>

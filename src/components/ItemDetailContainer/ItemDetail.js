@@ -42,9 +42,7 @@ export const ItemDetail = (props) => {
     }
 
     const removeFromCart = () => {
-      let item = props;
-      removeItem( item );
-      console.log(cart);
+      removeItem( props.id );
     }
 
     return (
