@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import ItemCount from '../../components/ItemCount.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useCart, CartProvider } from "../../context/CartContext.js"
+import { useCart } from "../../context/CartContext.js"
 import { Link } from "react-router-dom";
 
 export const ItemDetail = (props) => {
 
-    const {cart, addItem, removeItem, clearCart} = useCart();
+    const {addItem, removeItem} = useCart();
 
     //Defino estado para el componente ItemCount
     const [counter, setCounter] = useState(1);

@@ -19,6 +19,8 @@ export const Cart = (props) => {
 
     const divStyle = { display: "flex", marginBottom: 8 }
     const labelStyle = { marginRight: 4 }
+    const divItemStyle = { display: "flex", flexFlow: "row wrap", justifyContent: "center", alignItems: "stretch"}
+    const ItemStyle = { paddingRight: 5, paddingTop: 5}
   
     const inputs = [
       {
@@ -96,11 +98,13 @@ export const Cart = (props) => {
               cart.map((peli) => {
                   total = total + peli.priceInCart;
                   return(
-                    // <img scr={peli.pictureUrl} title={peli.name} alt={peli.name} />
                     <>
-                    <p><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stockInCart} | <strong>Precio total:</strong> {peli.priceInCart}</p>
+                    <div style={divItemStyle}>
+                    <p style={ItemStyle}><strong>Nombre:</strong> {peli.name} | <strong>Unidades:</strong> {peli.stockInCart} | <strong>Precio total:</strong> {peli.priceInCart} </p>
                     <Button value={peli.id} onClick={removeFromCart}>Remover Item</Button>
+                    </div>
                     </>
+
                   )
               })
               : <p>El carrito esta vacío.</p>

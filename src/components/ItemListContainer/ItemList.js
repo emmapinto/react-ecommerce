@@ -14,10 +14,10 @@ export const ItemList = ({info}) => {
         info.length ?
           info.map((peli) => {
             if (categoryId === peli.genre){
-              return(<Link to={`../item/${peli.id}`}><Item pelicula={peli} key={peli.id} /></Link>)
+              return(<Link to={`../item/${peli.id}`}><Item showModal={false} pelicula={peli} key={peli.id} /></Link>)
             }
             else if (categoryId === undefined) {
-              return(<Link to={`../item/${peli.id}`}><Item pelicula={peli} key={peli.id} /></Link>)
+              return(<Link to={`../item/${peli.id}`}><Item showModal={false} pelicula={peli} key={peli.id} /></Link>)
             }
           })
         : "Loading..."

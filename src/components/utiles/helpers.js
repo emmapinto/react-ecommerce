@@ -13,7 +13,7 @@ export const colors = {
 
 export const mobile = "720px";
 
-export const productList = [
+export const productListTest = [
     {
       "id": "01",
       "price": 200,

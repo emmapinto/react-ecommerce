@@ -70,5 +70,77 @@
       "year": 1985,
       "pictureUrl": "https://imgur.com/GvGqmQg.jpg",
       "genre": "Sci-Fi"
+    },
+    {
+      "id": "09",
+      "price": 200,
+      "name": "Apocalypse now",
+      "stock": 5,
+      "year": 1979,
+      "pictureUrl": "https://imgur.com/QMEjGKt.jpg",
+      "genre": "Drama"
+    },
+    {
+      "id": "10",
+      "price": 400,
+      "name": "Blade runner",
+      "stock": 10,
+      "year": 1982,
+      "pictureUrl": "https://imgur.com/MhAvu6A.jpg",
+      "genre": "Sci-Fi"
+    },
+    {
+      "id": "11",
+      "price": 600,
+      "name": "Conan the barbarian",
+      "stock": 8,
+      "year": 1982,
+      "pictureUrl": "https://imgur.com/TZexzp9.jpg",
+      "genre": "Aventuras"
+    },
+    {
+      "id": "12",
+      "price": 100,
+      "name": "Die hard",
+      "stock": 14,
+      "year": 1988,
+      "pictureUrl": "https://imgur.com/zKWS623.jpg",
+      "genre": "Accion"
+    },
+    {
+      "id": "13",
+      "price": 350,
+      "name": "Mad Max",
+      "stock": 15,
+      "year": 1979,
+      "pictureUrl": "https://imgur.com/DNVidxV.jpg",
+      "genre": "Accion"
+    },
+    {
+      "id": "14",
+      "price": 150,
+      "name": "Robocop",
+      "stock": 17,
+      "year": 1987,
+      "pictureUrl": "https://imgur.com/sVXg7wo.jpg",
+      "genre": "Accion"
+    },
+    {
+      "id": "15",
+      "price": 500,
+      "name": "Taxi driver",
+      "stock": 12,
+      "year": 1976,
+      "pictureUrl": "https://imgur.com/sEHt3Db.jpg",
+      "genre": "Drama"
+    },
+    {
+      "id": "16",
+      "price": 420,
+      "name": "Terminator",
+      "stock": 16,
+      "year": 1984,
+      "pictureUrl": "https://imgur.com/4s0cUDx.jpg",
+      "genre": "Sci-Fi"
     }
 ]

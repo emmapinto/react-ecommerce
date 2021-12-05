@@ -1,5 +1,5 @@
 import cartIcon from '../assets/img/cart_icon.png';
-import { useCart, CartProvider } from "../context/CartContext.js";
+import { useCart } from "../context/CartContext.js";
 
 const styles = {
     width: "50px",

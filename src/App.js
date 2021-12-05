@@ -62,7 +62,7 @@ function App() {
                 <SubHeader text="Tienda de clásicos" />
               </header>
               <section> 
-                <ItemDetailContainer />
+                <ItemDetailContainer/>
               </section>
             </div>
           </Route>

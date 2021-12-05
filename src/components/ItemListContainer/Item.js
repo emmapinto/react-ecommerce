@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
+import { useParams } from "react-router-dom";
 import ItemDetail from '../../components/ItemDetailContainer/ItemDetail.js';
 import Button from 'react-bootstrap/Button';
 
-export const Item = ({pelicula}) => {
+export const Item = ({pelicula, showModal}) => {
 
-    const [modalShow, setModalShow] = useState(false);
-    
+    const [modalShow, setModalShow] = useState(showModal);
+
     return (
         <div className="item" id={pelicula.name}>
            <div>
