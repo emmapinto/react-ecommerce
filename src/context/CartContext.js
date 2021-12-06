@@ -26,7 +26,6 @@ export const CartProvider = ({ children }) => {
     const clearCart = () => {
         setCart([]);
         alert("Se eliminaron los artículos del carrito");
-        console.log(cart);    
     }
 
     return (

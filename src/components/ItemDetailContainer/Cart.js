@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
-import { useCart, CartProvider } from "../../context/CartContext.js"
+import { useCart } from "../../context/CartContext.js"
 import { Link } from "react-router-dom";
 import { getFirestore } from '../../firebase';
 // import { doc, getDoc } from "firebase/firestore";
-import { collection, getDocs, setDocs, query, where, addDoc } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 
 export const Cart = (props) => {
 
@@ -37,7 +37,6 @@ export const Cart = (props) => {
       },
     ];
   
-  
     const [formFields, setFormFields] = useState({
       name: "",
       phone: "",
@@ -49,10 +48,6 @@ export const Cart = (props) => {
     }
   
     function onSubmit(event) {
-      console.log(event);
-      console.log(
-        `Se ha emitido una orden de compra a nombre de ${formFields.name}. Teléfono: ${formFields.phone} Email: ${formFields.email} por el valor total de ${total}.`
-      );
       alert(
         `Se ha emitido una orden de compra a nombre de ${formFields.name}. Teléfono: ${formFields.phone} Email: ${formFields.email} por el valor total de ${total}.`
       );
@@ -62,7 +57,6 @@ export const Cart = (props) => {
         Items: cart,
         Total: total
       };
-      console.log(order);
 
       const db = getFirestore();
 

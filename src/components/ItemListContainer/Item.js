@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { useParams } from "react-router-dom";
 import ItemDetail from '../../components/ItemDetailContainer/ItemDetail.js';
 import Button from 'react-bootstrap/Button';
 

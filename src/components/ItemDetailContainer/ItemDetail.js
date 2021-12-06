@@ -30,12 +30,8 @@ export const ItemDetail = (props) => {
 
     const addToCart = () => {
       if (counter != 0){
-
-        console.log(`Agregar al carrito el item N° ${props.id} "${props.name}", con la cantidad: ${counter} y el precio ${props.price}`);
         let item = {id: props.id, name: props.name, stockInCart: counter, priceInCart: (props.price*counter)};
-        console.log(item);
         addItem( item );
-
       } else {
         alert("No se pueden agregar 0 unidades al carrito!");
       }

@@ -10,8 +10,6 @@ export const ItemDetailContainer = (props) => {
 
     const { itemId } = useParams();
 
-    console.log(itemId);
-
     const [peliculas, setPeliculas] = useState([]);
 
     // *** PARA APLICAR FIREBASE ***

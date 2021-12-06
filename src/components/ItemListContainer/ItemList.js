@@ -6,8 +6,6 @@ export const ItemList = ({info}) => {
 
     const { categoryId } = useParams();
 
-    console.log(categoryId);
-
     return (
       <>
         {

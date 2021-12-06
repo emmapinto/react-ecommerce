@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {React, useContext, useEffect, useState } from 'react';
-import { BrowserRouter, Switch, Route, useParams } from "react-router-dom";
+import {React, useState } from 'react';
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { Logo } from './components/Logo.js';
 import { Header } from './components/Header.js';
