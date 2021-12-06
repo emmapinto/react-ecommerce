@@ -38,5 +38,6 @@ You will also see any lint errors in the console.
 <li>Se pueden remover las películas del carrito desde el detalle de cada una y también desde el Carrito.</li>
 <li>Al ingresar nombre y apellido, teléfono e e-mail, se activa el botón de "Finalizar compra".</li>
 <li>Al clickear en "Finalizar compra", se guarda la orden en la base de datos de Firebase que contiene los datos del comprador, todos los productos, el monto total y un código de orden.</li>
+<li>Se puede vaciar el carrito manualmente clickeando en "Vaciar carrito" y también se vacía una vez finalizada una compra.</li>
 </ul>
 
