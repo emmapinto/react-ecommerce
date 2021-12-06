@@ -21,7 +21,7 @@ You will also see any lint errors in the console.
 <li>Se utiliza Firebase para cargar el catálogo de productos y para grabar las ordenes de compra.</li>
 <li>Se ingresa a la ruta base con "/".</li>
 <li>Se accede al carrito con la ruta "/Cart".</li>
-<li>También se puede acceder a las cartegorias e items con el ruteo "categories/:categoryId" y "/item/:itemid" respectivamente.</li>
+<li>También se puede acceder a las cartegorias e items con el ruteo "categories/:categoryId" y "/item/:itemId" respectivamente.</li>
 <li>Se hace uso de los componentes sugeridos: NavBar, CartWidget, CartContext, Cart, Item, ItemList, ItemListContainer, ItemDetail, ItemDetailContainer, Category, ItemCount.</li>
 </ul>
 
