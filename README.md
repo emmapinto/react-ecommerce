@@ -31,13 +31,13 @@ You will also see any lint errors in the console.
 ## `El simulador permite las siguientes interacciones:`
 
 <ul>
-<li>Ingresar por primera vez el nombre del visitante y será recordado en próximas sesiones. </li>
-<li>Se pueden agregar y remover productos al carrito que seran recordados en próximas sesiones.</li>
-<li>Los productos pendientes en el carrito son contabilizados y se pueden mostrar al hacer click en el botón "Cart". También se calcula su precio total.</li>
-<li>Se puede vaciar el carrito clickeando en el botón correspondiente.</li>
-<li>Se puede cargar el Stock desde un archivo JSON al catálogo haciendo click en el botón "Cargar Stock".</li>
-<li>Se pueden filtrar los productos del catálogo a través del filtro por Categorias en el Menu de navegación.</li>
-<li>Se pueden cargar productos de forma individual a través del formulario de Carga completando los datos correspondientes.</li>
-<li>Se pueden remover productos del Front clickando en el botón "Remover del catálogo". Los mismos reaparecerán al recargar la página.</li>
+<li>Navegar por el catálogo de películas e ir a sus detalles.</li>
+<li>Filtrar por género de película.</li>
+<li>Desde el detalle se puede ver la descripción, foto y precio e ingresarlo al carrito.</li>
+<li>Se valida desde el contador número mínimo y máximo (de acuerdo al stock disponible) de unidades que se pueden agregar.</li>
+<li>En el carrito se pueden visualizar un listado compacto de la orden con el precio total.</li>
+<li>Se pueden remover las películas del carrito desde el detalle de cada una y también desde el Carrito.</li>
+<li>Al ingresar nombre y apellido, teléfono e e-mail, se activa el botón de "Finalizar compra".</li>
+<li>Al clickear en "Finalizar compra", se guarda la orden en la base de datos de Firebase que contiene los datos del comprador, todos los productos, el monto total y un código de orden.</li>
 </ul>
 
