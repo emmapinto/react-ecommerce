@@ -22,6 +22,8 @@ You will also see any lint errors in the console.
 <li>Se ingresa a la ruta base con "/".</li>
 <li>Se accede al carrito con la ruta "/Cart".</li>
 <li>También se puede acceder a las cartegorias e items con el ruteo "categories/:categoryId" y "/item/:itemId" respectivamente.</li>
+<li>El logo del menu esta linkeado a la ruta base</li>
+<li>El icono del carrito en el menu muestra con un Badge la cantidad de items que contiene.</li>
 <li>Se hace uso de los componentes sugeridos: NavBar, CartWidget, CartContext, Cart, Item, ItemList, ItemListContainer, ItemDetail, ItemDetailContainer, Category, ItemCount.</li>
 </ul>
 
